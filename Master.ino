@@ -260,7 +260,7 @@ void loop() {
   }
   else if (StepperController.sweep_finished) {
     if (key) {
-      switch(key){
+      switch (key) {
         case 'A':
           StepperController.reset();
           StepperController.moveToStart(MasterOutputs.start_position);
@@ -338,9 +338,9 @@ void loop() {
     if (MasterOutputs.raw_outputs[2] > 0) {
       lcd.setCursor(0,0);
       lcd.print(" OK-A   Clear-C ");
-      if(key) {
-      switch(key){
-        case 'A': {
+      if (key) {
+      switch (key) {
+        case 'A':
           MasterOutputs.calculate();
           if (MasterOutputs.sweep_vector[1] < 330) {
             lcd.setCursor(0,0);
@@ -352,19 +352,16 @@ void loop() {
           } else {
             StepperController.moveToStart(MasterOutputs.start_position);
           }
-          break;
-        }
-        case 'C': {
+        case 'C':
           LCDDisplay.reset();
           MasterOutputs.reset();
           break;
-        }
         default:
           break;
         }
       }
     }
-    else if(key) {
+    else if (key) {
       switch (key) {
         case 'A':
           MasterOutputs.confirm();
