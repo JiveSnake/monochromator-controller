@@ -1,5 +1,5 @@
-# monochrometer-controller
-Control program for a Monochrometer
+# monochromator-controller
+Control program for a Monochromator
 
 The program is for two Arduino's in a I2C Master-Slave set up.
 The Master is also connected to a 2x16 LCD screen, a 4x4 keypad, a switch, and a gap wheel encoder.
